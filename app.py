@@ -1,8 +1,6 @@
+# Import necessary classes and functions from llama_index and other libraries.
 import os
 import docx2txt
-# Import necessary classes and functions from llama_index and other libraries.
-# Commented out import of GeminiEmbedding as it is not used in the code.
-#from llama_index.embeddings.gemini import GeminiEmbedding
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.llms.ollama import Ollama
@@ -11,9 +9,6 @@ from dotenv import load_dotenv
 
 # Load documents from the 'data' directory using SimpleDirectoryReader.
 documents = SimpleDirectoryReader("data").load_data()
-
-# Print the number of loaded documents. This line is commented out.
-#print(len(documents))
 
 # Set the API key for accessing the Gemini model.
 load_dotenv()
@@ -31,8 +26,5 @@ index = VectorStoreIndex.from_documents(documents,)
 query_engine = index.as_query_engine()
 
 # Query the index with a specific question and print the response.
-
-
-# response = query_engine.query("What did the author do growing up?")
-response=query_engine.query("What are the various methods in list  ?")
+response = query_engine.query("What did the author do growing up?")
 print(response)

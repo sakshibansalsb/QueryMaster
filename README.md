@@ -4,6 +4,7 @@
 
 - [Project Overview](#project-overview)
 - [Features](#features)
+- [Architecture](#architecture)
 - [Setup Instructions](#setup-instructions)
 - [Usage](#usage)
 - [Applications](#applications)
@@ -17,6 +18,9 @@ This project creates a queryable index of documents using the Gemini language mo
 - Create and manage a vector-based index of documents.
 - Efficiently query the indexed documents using natural language questions.
 - Easily integrate with the Gemini language model for advanced query handling.
+  
+## Architecture
+![chatbot](https://github.com/user-attachments/assets/bf8d7034-6e7a-4f7d-810f-84007e67c539)
 
 ## Setup Instructions
 
